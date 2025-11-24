@@ -7,14 +7,9 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 let isRunning = false;
 
 export async function GET(request: Request) {
-    try {
-        if (isRunning) {
-            return NextResponse.json({
-                error: 'Cron job is already running',
-                message: 'Please wait for the current job to complete'
-            }, { status: 409 });
-        }
+    let lockAcquired = false;
 
+    try {
         const authHeader = request.headers.get('authorization');
         const cronSecret = process.env.CRON_SECRET;
 
@@ -22,7 +17,15 @@ export async function GET(request: Request) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 
+        if (isRunning) {
+            return NextResponse.json({
+                error: 'Cron job is already running',
+                message: 'Please wait for the current job to complete'
+            }, { status: 409 });
+        }
+
         isRunning = true;
+        lockAcquired = true;
 
         console.log('[Cron] Starting tag validation...');
 
@@ -96,6 +99,8 @@ export async function GET(request: Request) {
             { status: 500 }
         );
     } finally {
-        isRunning = false;
+        if (lockAcquired) {
+            isRunning = false;
+        }
     }
 }
