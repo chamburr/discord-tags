@@ -6,6 +6,9 @@ import Footer from '@/components/Footer';
 export const metadata = {
     title: 'Terms of Service',
     description: 'Review the Terms of Service for Discord Tags. Learn about the rules and guidelines for using our Discord Server Tags directory.',
+    alternates: {
+        canonical: '/terms',
+    },
 };
 
 export default function TermsPage() {

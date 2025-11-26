@@ -13,7 +13,7 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get('q') || '';
     const page = Number(searchParams.get('page')) || 1;
-    const limit = Number(searchParams.get('limit')) || 12;
+    const limit = Number(searchParams.get('limit')) || 24;
 
     const result = await getTags(query, page, limit);
 

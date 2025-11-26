@@ -6,6 +6,9 @@ import Footer from '@/components/Footer';
 export const metadata = {
     title: 'Privacy Policy',
     description: 'Read the Privacy Policy for Discord Tags. Understand how we collect, use, and protect your data while you explore Server Tags.',
+    alternates: {
+        canonical: '/privacy',
+    },
 };
 
 export default function PrivacyPage() {

@@ -36,7 +36,7 @@ export default function AdoptionGuide() {
     return (
         <div className="space-y-6">
             <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold text-white mb-2">How to Adopt This Tag</h2>
+                <h2 className="text-2xl font-bold text-white mb-2">How to Adopt This Discord Tag</h2>
                 <p className="text-zinc-400 text-sm">Follow these simple steps to get this tag on your profile</p>
             </div>
 

@@ -6,6 +6,9 @@ import Image from 'next/image';
 export const metadata: Metadata = {
     title: 'Partners',
     description: 'Explore our partners and collaborators. Discover amazing Discord tools, bots, and services recommended by Discord Tags.',
+    alternates: {
+        canonical: '/partners',
+    },
 };
 
 export default function Partners() {

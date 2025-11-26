@@ -45,6 +45,9 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
     return {
         title,
         description,
+        alternates: {
+            canonical: `/tags/${tag.id}`,
+        },
         keywords: [
             tag.name,
             `${tag.name} Discord tag`,

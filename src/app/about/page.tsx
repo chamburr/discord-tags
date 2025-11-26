@@ -6,6 +6,9 @@ import Image from 'next/image';
 export const metadata: Metadata = {
     title: 'About Us',
     description: 'Learn about Discord Tags, the ultimate directory for Discord Server Tags. Discover how to customize your profile with unique badges.',
+    alternates: {
+        canonical: '/about',
+    },
     keywords: [
         'What are Discord tags',
         'Discord Server Tags explained',

@@ -82,7 +82,7 @@ export default function TagGrid({ tags, currentPage }: TagGridProps) {
                             </div>
 
                             <div className="flex items-center gap-1 text-zinc-500 text-xs group-hover:text-indigo-400 transition-colors">
-                                <span>View details</span>
+                                <span>View Discord Tag</span>
                                 <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                             </div>
                         </div>

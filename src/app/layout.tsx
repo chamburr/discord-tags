@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://discordtags.me'),
+    alternates: {
+        canonical: '/',
+    },
     title: {
         default: 'Discord Tags | The Best Discord Server Tags List',
         template: '%s | Discord Tags',

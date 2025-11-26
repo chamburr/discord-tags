@@ -1,7 +1,7 @@
 import prisma from '@/lib/db';
 import { Tag } from '@prisma/client';
 
-export async function getTags(query: string, page: number = 1, limit: number = 12) {
+export async function getTags(query: string, page: number = 1, limit: number = 24) {
     const skip = (page - 1) * limit;
 
     try {

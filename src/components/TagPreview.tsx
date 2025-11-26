@@ -12,7 +12,7 @@ export default function TagPreview({ badgeIcon, tagName }: TagPreviewProps) {
     return (
         <div className="space-y-6">
             <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold text-white mb-2">Tag Preview</h2>
+                <h2 className="text-2xl font-bold text-white mb-2">Discord Tag Preview</h2>
                 <p className="text-zinc-400 text-sm">See how this tag will look on your Discord profile</p>
             </div>
 
